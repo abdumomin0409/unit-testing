@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: dev
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: language-service
+server:
+  port: 8093
+#database
+spring.datasource:
+  driverClassName: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/postgres
+  username: postgres
+  password: 1234
+  hikari:
+    maximum-pool-size: 5
+
+
+
